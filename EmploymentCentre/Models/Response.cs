@@ -11,14 +11,14 @@ public enum ResponseStatus
 
 public class Response
 {
-    public int Id { get; set; }
+    public Guid Id { get; set; } = Guid.NewGuid();
 
-    public int ResumeId { get; set; }
+    public Guid ResumeId { get; set; }
 
     [ForeignKey("ResumeId")]
     public Resume Resume { get; set; }
 
-    public int VacancyId { get; set; }
+    public Guid VacancyId { get; set; } = Guid.NewGuid();
 
     [ForeignKey("VacancyId")]
     public Vacancy Vacancy { get; set; }

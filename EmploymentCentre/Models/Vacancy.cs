@@ -5,10 +5,10 @@ namespace EmploymentCentre.Models;
 
 public class Vacancy
 {
-    public int Id { get; set; }
+    public Guid Id { get; set; } = Guid.NewGuid();
 
     [Required]
-    public int EmployerId { get; set; }
+    public Guid EmployerId { get; set; }
 
     [ForeignKey("EmployerId")]
     public User Employer { get; set; }

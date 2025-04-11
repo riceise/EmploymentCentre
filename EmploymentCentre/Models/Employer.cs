@@ -5,8 +5,8 @@ namespace EmploymentCentre.Models;
 
 public class Employer
 {
-    [Key, ForeignKey("User")]
-    public int UserId { get; set; }
+    [Key, ForeignKey("User")] 
+    public Guid UserId { get; set; } = Guid.NewGuid();
 
     public string CompanyName { get; set; } = string.Empty;
     public string ContactPerson { get; set; } = string.Empty; 
